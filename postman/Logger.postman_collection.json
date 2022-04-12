@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "d4fddded-d9a2-41b7-880f-835c4f052e30",
+		"name": "Logger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add aplication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2FjaW9uMVwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA3OjMyOjE5IEFNXCJ9Ig.ztsi_8Rna30M6WgiTgJnvUQROQPqlm6fEOUA7zNtgW4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Aplication2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/aplication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"aplication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Aplication2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get logs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2FjaW9uMVwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA3OjMyOjE5IEFNXCJ9Ig.ztsi_8Rna30M6WgiTgJnvUQROQPqlm6fEOUA7zNtgW4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/logs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2FjaW9uMVwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA3OjMyOjE5IEFNXCJ9Ig.ztsi_8Rna30M6WgiTgJnvUQROQPqlm6fEOUA7zNtgW4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/logs/625575d15c327450123eb536",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logs",
+						"625575d15c327450123eb536"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2F0aW9uMlwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA5OjEwOjIwIEFNXCJ9Ig.d9pC13ch0I-4x7EnL3o4vEsQ3c6t1pRDChS24g5v7rA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"info\",\"priority\":\"low\",\"path\": \"/\",\"message\":\"Logger init\",\"request\":1,\"response\":\"uno\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/logs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2FjaW9uMVwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA3OjMyOjE5IEFNXCJ9Ig.ztsi_8Rna30M6WgiTgJnvUQROQPqlm6fEOUA7zNtgW4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"info\",\"priority\":\"low\",\"path\": \"/\",\"message\":\"Logger\",\"request\":3,\"response\":\"dos\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/logs/625581ad1a619d6b5fc52a17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logs",
+						"625581ad1a619d6b5fc52a17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcIm5hbWVfYXBwXCI6XCJBcGxpY2FjaW9uMVwiLFwiZGF0ZVwiOlwiNC8xMi8yMDIyLCA3OjMyOjE5IEFNXCJ9Ig.ztsi_8Rna30M6WgiTgJnvUQROQPqlm6fEOUA7zNtgW4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/logs/625575d15c327450123eb536",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logs",
+						"625575d15c327450123eb536"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
